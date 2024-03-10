@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>Assignment 4</h1>
+            <h2>Shadow Mapping | <a
+                    href="https://canvas.ucdavis.edu/courses/812691/assignments/1085000" target="_blank">Instructions</a></h2>
+        </div>
+        <div class="settings-container">
+            <div class="setting">
+                <h3>3D Scene</h3>
+                <div class="setting-item-container">
+                    <div id="openfileLabel" class="setting-item active">Load Scene File<br></div>
+                    <div id="openfileAction" class="setting-item inactive">
+                        <input id="openfileActionInput" type="file" multiple="false" accept="application/json">
+                    </div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Shading</h3>
+                <div class="setting-item-container">
+                    <div id="shadingPhong" class="setting-item inactive">[C] Phong</div>
+                    <div id="shadingTextured" class="setting-item inactive">[V] Textured</div>
+                    <div id="shadingShadow" class="setting-item inactive">[B] Shadow Mapping</div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Shading Debug</h3>
+                <div class="setting-item-container">
+                    <div id="shadingDebugNormals" class="setting-item inactive">[Hold N] Normals</div>
+                    <div id="shadingPreviewFBO" class="setting-item inactive">[Hold W] Preview FBO</div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Control</h3>
+                <div class="setting-item-container">
+                    <div id="controlCamera" class="setting-item inactive">Camera</div>
+                    <div id="controlSceneNode" class="setting-item inactive">[Hold Q] Scene Node</div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Select Filter</h3>
+                <div class="setting-item-container">
+                    <div id="selectFilterLabel" class="setting-item active">Select Filter</div>
+                    <select id="selectFilterSelect"> 
+                        <option value="-1">Nothing</option>
+                        <option value="0">Identity</option>
+                        <option value="1">Depth</option>
+                        <option value="2">Sobel</option>
+                    </select>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Select Scene Node</h3>
+                <div class="setting-item-container">
+                    <div id="selectSceneNodeLabel" class="setting-item active">Select Scene Node</div>
+                    <select id="selectSceneNodeSelect" disabled></select>
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div id="preview" class="card" style="visibility: hidden;">
+            <h5>Texture Preview</h5>
+            <img width="300" height="auto"></img>
+        </div>
+
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
